@@ -226,10 +226,11 @@ std::string strip_html(const std::string& html) {
 HTMLParseResult parse_html(const std::string& html, const ParseConfig& cfg) {
     HTMLParseResult result;
 
-    bool in_tag    = false;
-    bool in_script = false;
-    bool in_style  = false;
-    bool in_title  = false;
+    bool in_tag     = false;
+    bool in_script  = false;
+    bool in_style   = false;
+    bool in_title   = false;
+    bool in_heading = false;
     std::string tag_buf;
     std::string text_buf;
 
@@ -261,10 +262,21 @@ HTMLParseResult parse_html(const std::string& html, const ParseConfig& cfg) {
                 else if (tl == "/title") in_title = false;
                 // headings
                 else if (tl.size() == 2 && tl[0] == 'h' && tl[1] >= '1' && tl[1] <= '6') {
-                    // collect heading text until </h?>
+                    flush_text();
+                    in_heading = true;
                     result.text += '\n';
                 }
                 else if (tl.size() == 3 && tl[0] == '/' && tl[1] == 'h' && tl[2] >= '1' && tl[2] <= '6') {
+                    flush_text();
+                    if (!result.text.empty()) {
+                        // grab heading text: walk back to last '\n' to find heading content
+                        auto last_nl = result.text.rfind('\n', result.text.size() - 1);
+                        if (last_nl != std::string::npos) {
+                            std::string heading = result.text.substr(last_nl + 1);
+                            if (!heading.empty()) result.headings.push_back(heading);
+                        }
+                    }
+                    in_heading = false;
                     result.text += '\n';
                 }
                 // links
